@@ -5,9 +5,9 @@
 
 \usepackage{hyperref}
 
-\title{Ridge Regression and the Lasso}
+\title{Lasso and Ridge Regression}
 \author{Scott Powers}
-\date{STaRT@Rice 2024}
+\date{STaRT@Rice}
 
 \begin{document}
 
@@ -15,25 +15,32 @@
     \maketitle
   \end{frame}
 
+  \begin{frame}{About me}
+    \includegraphics[width = 0.45\textwidth]{images/alcs.jpg}
+    \hfill
+    \includegraphics[width = 0.45\textwidth]{images/qr.jpg}
+  \end{frame}
+
   \begin{frame}{Outline}
     \begin{columns}
-      \begin{column}{0.45\textwidth}
-        Part I: Theory (60 minutes)
+      \begin{column}{0.46\textwidth}
+        Part I: Concepts (60 minutes)
         \begin{itemize}
+          \item Linear regression
           \item Ridge regression
           \item The lasso
           \item Comparison
           \item Cross-validation
         \end{itemize}
       \end{column}
-      \begin{column}{0.55\textwidth}
+      \begin{column}{0.54\textwidth}
         Part II: Application (30 minutes)
         \begin{itemize}
           \item The glmnet package in R
           \item Application to basketball
         \end{itemize}
         ~\\
-        Part III: Practice (90 minutes)
+        Part III: Practice (60 minutes)
         \begin{itemize}
           \item R tutorial
         \end{itemize}
@@ -61,9 +68,34 @@
     \end{itemize}
   \end{frame}
 
-  \begin{frame}{Linear regression}
-    Standard linear model:
-    $$Y = \beta_0 + \beta_1 X_1 + ... + \beta_p X_p + \epsilon$$
+  \begin{frame}{Simple linear regression}
+    \centering
+    $$Y \approx \beta_0 + \beta_1 X$$
+    \includegraphics[width = 0.75\textwidth]{images/simple_linear_regression.png}
+    \vfill
+    \hfill \footnotesize Credit: ISLR, page 62
+  \end{frame}
+
+  \begin{frame}{Simple linear regression}
+    \centering
+    \begin{align*}
+      \text{RSS}  &= (y_1 - \hat\beta_0 - \hat\beta_1 x_1)^2 + (y_2 - \hat\beta_0 - \hat\beta_1 x_2)^2 + ... +  (y_n - \hat\beta_0 - \hat\beta_1 x_n)^2\\
+                  &= \sum_{i = 1}^n (y_i - \hat\beta_0 - \hat\beta_1 x_1)^2
+    \end{align*}
+    \includegraphics[width = 0.75\textwidth]{images/rss.png}
+    \vfill
+    \hfill \footnotesize Credit: ISLR, page 62
+  \end{frame}
+
+  \begin{frame}{Multiple linear regression}
+    \centering
+    $$Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + ... + \beta_p X_p + \epsilon$$
+    \includegraphics[width = 0.7\textwidth]{images/multiple_linear_regression.png}
+    \vfill
+    \hfill \footnotesize Credit: ISLR, page 74
+  \end{frame}
+
+  \begin{frame}{Multiple linear regression}
     Least squares (the typical fitting procedure):
     $$\hat\beta = \arg\min_\beta \left\{ \sum_{i = 1}^n \left(y_i - \beta_0 - \sum_{j = 1}^p \beta_j x_{ij}\right)^2 \right\}$$
     \begin{itemize}
