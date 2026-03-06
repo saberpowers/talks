@@ -1,7 +1,7 @@
 
 \documentclass{beamer}
 \usetheme{Singapore}
-\usecolortheme[dark,accent=blue]{solarized}
+\usepackage[dark,accent=blue]{../../assets/beamercolorthemesolarized}
 \setbeamertemplate{navigation symbols}{\insertframenumber}
 \setbeamercolor{navigation symbols}{fg = solarizedAccent}
 \setbeamerfont{navigation symbols}{size = \tiny}
@@ -9,6 +9,10 @@
 \usepackage{hyperref, tikz}
 \usetikzlibrary{arrows.meta, shapes.geometric}
 \tikzset{>={To[length=3mm,width=3mm]}}
+
+\graphicspath{{../assets}}
+\newcommand{\tablepath}{../assets/tables/}
+\newcommand{\inputtable}[1]{\input{\tablepath #1}}
 
 \title{Winning baseball games by\\solving statistics puzzles}
 \author{Scott Powers}
@@ -111,7 +115,7 @@
 
   \begin{frame}{Results: Optimal Lead Distance}
     \begin{center}
-      \input{tables/actual_vs_rec_lead.tex}
+      \inputtable{actual_vs_rec_lead.tex}
     \end{center}
     \vfill
     Additional results in paper:
