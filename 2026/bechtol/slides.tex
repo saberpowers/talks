@@ -1,0 +1,147 @@
+
+\documentclass{beamer}
+\usetheme{Singapore}
+\definecolor{rice_blue}{HTML}{00205B}
+\definecolor{rice_gray}{HTML}{7C7E7F}
+\definecolor{medium_blue}{HTML}{4D9AD4}
+\usecolortheme[named=rice_blue]{structure}
+\setbeamercolor{alerted text}{fg=medium_blue}
+\setbeamerfont{navigation symbols}{size = \tiny}
+\setbeamertemplate{navigation symbols}{\insertframenumber}
+
+\usepackage{helvet, hyperref, svg, tikz}
+\usetikzlibrary{arrows.meta, shapes.geometric}
+\tikzset{>={To[length=3mm,width=3mm]}}
+
+\graphicspath{{..}}
+
+\title{Analytics and Aesthetics in Sports}
+\author{Scott Powers}
+\date{September 16, 2026}
+\begin{document}
+
+  \begin{frame}
+      \maketitle
+      \vfill\hfill\includegraphics[width = 4cm]{../../assets/rice_logo_white.png}
+  \end{frame}
+
+  \begin{frame}{What is sport analytics?}
+    \includegraphics[width = \textwidth]{images/sport_analytics.jpg}
+  \end{frame}
+
+  \begin{frame}{Books about baseball teams using analytics to win}
+    \begin{columns}
+      \begin{column}{0.25\textwidth}
+        \centering
+        \includegraphics[width = \textwidth]{images/books/moneyball.jpg}\\
+        ~\\
+        2002\\ Oakland\\ Athletics
+      \end{column}
+      \begin{column}{0.25\textwidth}
+        \centering
+        \includegraphics[width = \textwidth]{images/books/the_extra_two.jpg}\\
+        ~\\
+        2008\\ Tampa Bay\\ Rays
+      \end{column}
+      \begin{column}{0.25\textwidth}
+        \centering
+        \includegraphics[width = \textwidth]{images/books/big_data_baseball.jpg}\\
+        ~\\
+        2013\\ Pittsburgh\\ Pirates
+      \end{column}
+      \begin{column}{0.25\textwidth}
+        \centering
+        \includegraphics[width = \textwidth]{images/books/astroball.jpg}\\
+        ~\\
+        2017\\ Houston\\ Astros
+      \end{column}
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}{MLB R\&D staff sizes (according to Reddit)}
+    \begin{columns}
+      \begin{column}{0.55\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/staff_2018.png}\\
+        2018
+      \end{column}
+      \begin{column}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/staff_2025.jpeg}\\
+        2025
+      \end{column}
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}{What are they all doing?}
+    \centering
+    \includegraphics[height=0.8\textheight]{images/applications.pdf}
+  \end{frame}
+
+  \begin{frame}{The spectrum of sport analytics}
+    \begin{tikzpicture}
+      \draw[thick, <->] (0, 0) -- (10, 0);
+      \node at (0, -0.5) {hard};
+      \node at (10, -0.5) {easy};
+      \node at (1,  1) {\includegraphics[width = 1cm]{images/soccer.png}};
+      \node at (4,  1) {\includegraphics[width = 1cm]{images/basketball.png}};
+      \node at (5,  1) {\includegraphics[width = 1cm]{images/football.png}};
+      \node at (8,  1) {\includegraphics[width = 1cm]{images/volleyball.png}};
+      \node at (9,  1) {\includegraphics[width = 1cm]{images/baseball.png}};
+    \end{tikzpicture}
+  \end{frame}
+
+  \begin{frame}
+    Big moments in sport analytics
+    \vfill
+    \begin{enumerate}
+      \item 2020 World Series Game 6
+      \item 2024 NBA Finals Game 1
+      \item Super Bowl LII
+    \end{enumerate}
+    \vfill
+    ... and their implications for aesthetics
+  \end{frame}
+
+  \begin{frame}{2020 World Series Game 6}
+    \includegraphics[width = \textwidth]{images/world_series.jpg}
+  \end{frame}
+
+  \begin{frame}{A controversy 120 years in the making}
+    \includegraphics[width = \textwidth]{images/mlb_reliever_innings.jpg}\\
+    \hfill \footnotesize Bobby Mueller, \textit{Off the Bench}
+  \end{frame}
+
+  \begin{frame}{2024 NBA Finals Game 1}
+    \includegraphics[width = \textwidth]{images/nba_finals.jpg}
+  \end{frame}
+
+  \begin{frame}{Three is greater than two}
+    \centering
+    \includegraphics[width = 3in]{images/nba_three_pointers.png}
+  \end{frame}
+
+  \begin{frame}{Super Bowl LII}
+    \includegraphics[width = \textwidth]{images/super_bowl.png}
+  \end{frame}
+
+  \begin{frame}{Go for it!}
+    \includegraphics[width = \textwidth]{images/nfl_fourth_down.jpg}\\
+    \footnotesize \url{https://www.reddit.com/r/nfl/comments/1raxi4n/oc_going_for_it_on_fourth_down_analytics_or/}
+  \end{frame}
+
+  \begin{frame}{Playing it by the book}
+    \includegraphics[width = \textwidth]{images/nfl_go_for_it.png}\\
+    \vfill
+    \hfill \footnotesize \textit{New York Times} 4th Down Bot
+  \end{frame}
+
+  \begin{frame}{Summary}
+    \begin{enumerate}
+      \item Teams use analytics to win more games through \alert{\bf player evaluation}, \alert{\bf player development}, and \alert{\bf in-game strategy}
+      \item Improved strategy is \alert{\bf sometimes less} aesthetically pleasing, \alert{\bf sometimes more} aesthetically pleasing
+      \item Some sports (e.g., baseball, volleyball) are more amenable to analysis than others (e.g., soccer)
+    \end{enumerate}
+  \end{frame}
+
+\end{document}
